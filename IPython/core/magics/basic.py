@@ -91,6 +91,20 @@ class BasicMagics(Magics):
         'target',
         help="""Name of the existing line or cell magic."""
     )
+
+    @skip_doctest
+    @line_magic
+    def e(self, parameter_s=''):
+        """Return everyone's favorite mathematical constant, e.
+           Examples
+           -------
+           ::
+           
+                In[1]: e
+                Out[1]: '2.7'
+        """
+        return '2.7'
+
     @line_magic
     def alias_magic(self, line=''):
         """Create an alias for an existing line or cell magic.
